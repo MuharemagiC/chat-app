@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 45% 45% 10%;
+    grid-template-areas: "sidebar chat"
+                         "sidebar chat"
+                         "sidebar input";
+}
+
+.sidebar {
+    background: #474748;
+    grid-area: sidebar;
+}
+
+#message-container {
+    grid-area: chat;
+    padding-left: 50px;
+    overflow: scroll;
+    overflow-x: hidden;
+    background: #D8DDEF;
+}
+
+.input-form {
+    grid-area: input;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #D8DDEF;
+}
+
+#message-form {
+    display: flex;
+    width: 80%;
+    margin-left: 50px;
+}
+
+#message-form > input {
+    flex-grow: 1;
+    height: 40px;
+    margin-right: 10px;
+    outline: none;
+    border: 2px solid #197278;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+#message-form > input::placeholder {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+#message-form > button {
+    height: 40px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+#send-location__button {
+    width: 130px;
+    height: 40px;
+}
+
+.message-user {
+    margin-top: 30px;
+}
+
+.user {
+    color: #0A090C;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.timestamp {
+    color: #727277;
+    font-style: italic;
+}
+
+.message-user > p {
+    margin-top: 8px;
+    color: #474748;
+    font-weight: 150;
+}
+
+#send-button {
+    outline: none;
+    border: 2px solid #197278;
+    background-color: Snow;
+    color: #197278;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+}
+
+#send-location__button {
+    outline: none;
+    border: 2px solid #197278;
+    background-color: Snow;
+    color: #197278;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+}
+
+#send-button:hover {
+    color: #FFF;
+    background: #197278;
+}
+
+#send-location__button:hover {
+    color: #FFF;
+    background: #197278;
+}
+
+.sidebar {
+     overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.sidebar-content > h1 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-top: 8px;
+    color: #F2EFE9 ;
+    background: #2d2d30;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-content > h3{
+    margin-top: 8px;
+    font-size: 1.6rem;
+    color: #F2EFE9;
+}
+
+.sidebar-content > ul {
+    margin-top: 8px;
+    list-style: none;
+    color: #F2EFE9;
+}
+
+
+.sidebar-content > ul > li {
+    margin-top: 8px;
+}
+
+.message-location {
+    margin-top: 30px;
+}
+
+.message-location > p{
+    margin-top: 8px;
+}
